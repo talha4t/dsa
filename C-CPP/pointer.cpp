@@ -26,14 +26,23 @@ int main() {
     float f = 11.2;
     float *p5 = &f;
 
-    cout << sizeof(b) << endl;
+    // cout << sizeof(b) << endl;
 
-    cout << sizeof(p2) << endl; // size of int pointer 
-    cout << sizeof(p3) << endl; // size of double pointer
-    cout << sizeof(c) << endl; // size of character pointer 
-    cout << sizeof(f) << endl; // size of float pointer
+    // cout << sizeof(p2) << endl; // size of int pointer 
+    // cout << sizeof(p3) << endl; // size of double pointer
+    // cout << sizeof(c) << endl; // size of character pointer 
+    // cout << sizeof(f) << endl; // size of float pointer
 
+    // NULL pointer 
+    // int *p6 = NULL; // use NULL or 0
+    
+    // cout << *p6 << endl;
 
+    // Important concept
+    int i = 5;
+    int *p7 = &i;
+
+    cout << ++(*p7) << endl; // do it here pre increment 
    
     return 0;
 }
