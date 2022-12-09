@@ -65,7 +65,7 @@
                 return;
             }
 
-            void push_at_certain_position(int x, int position) {
+            void push_at_certain_position(int position, int x) {
                 if (position == 1) {
                     push_front(x);
                     return;
@@ -205,9 +205,19 @@
         l.push_back(17); // in      :14 10 17
         l.push_back(19); // in      :14 10 17 19
 
-        l.push_at_certain_position(2, 87); // in     :14 10 87 17 19
+        l.push_at_certain_position(2, 87); // in     :14 87 10 17 19
+
+        l.printList(); // output    :14 87 10 17 19
+
+        l.pop_back(); // out        :14 10 87 17
 
         l.printList();
+
+        l.pop_from_certain_postion(3); // out       :14 10 17
+
+        l.printList(); // output    : 14 10 17
+
+
 
         
         return 0;
