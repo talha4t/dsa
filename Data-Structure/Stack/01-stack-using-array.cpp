@@ -31,6 +31,7 @@ class Stack {
         // delete element
         void pop() {
             if (is_empty()) {
+                cout << "The stack is Empty now." << '\n';
                 return;
             }
 
