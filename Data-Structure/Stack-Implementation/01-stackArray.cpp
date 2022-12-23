@@ -61,6 +61,11 @@ int main() {
 
     cout << s.top() << '\n'; //     :  25
 
+    s.pop(); //        :  10 41 -> now top is 41
+    s.pop(); //        :  10 top is 10
+
+    cout << s.top() << '\n'; //     :   10
+
     
     return 0;
 }
