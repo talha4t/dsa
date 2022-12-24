@@ -5,9 +5,11 @@ class Stack {
     public:
         int arr[100007];
         int Top;
+        int _size;
 
         Stack() {
             Top = -1;
+            _size = 0;
         }
 
         bool is_empty() {
@@ -25,6 +27,8 @@ class Stack {
 
             arr[Top] = x;
 
+            _size++;
+
             return;
         }
 
@@ -37,6 +41,7 @@ class Stack {
 
             Top--;
             
+            _size--;
             return;
         }
 
@@ -49,6 +54,10 @@ class Stack {
             else {
                 return arr[Top];
             }
+        }
+
+        int size() {
+            return _size;
         }
 };
 
@@ -67,6 +76,6 @@ int main() {
 
     cout << s.top() << '\n'; //     :   10
 
-    
+    cout << s.size() << '\n';
     return 0;
 }
