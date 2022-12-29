@@ -179,11 +179,10 @@ class LinkedList {
                 return;
             }
 
-            Node* temp; // data / next 
+            Node* temp; 
 
             temp = head;
 
-            // temp->data
             while(temp != NULL) {
                 cout << temp -> data << " ";
                 temp = temp -> next;
@@ -210,13 +209,13 @@ int main() {
 
     l.printList(); // output    :14 87 10 17 19
 
-    // l.pop_back(); // out        :14 10 87 17
+    l.pop_back(); // out        :14 10 87 17
 
-    // l.printList();
+    l.printList();
 
-    // l.pop_from_certain_postion(3); // out       :14 10 17
+    l.pop_from_certain_postion(3); // out       :14 10 17
 
-    // l.printList(); // output    : 14 10 17
+    l.printList(); // output    : 14 10 17
 
 
 
