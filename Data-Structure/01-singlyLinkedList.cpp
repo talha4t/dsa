@@ -95,6 +95,7 @@ class LinkedList {
 
             temp = head;
 
+
             for (int i = 1; i < position - 1; i++) {
                 temp = temp -> next;
             }
@@ -120,10 +121,10 @@ class LinkedList {
 
         void pop_back() {
             Node* temp;
-
+   
             temp = head;
 
-            while(temp -> next -> next != NULL) {
+            while(temp -> next -> next  != NULL) {
                 temp = temp -> next;
             }
 
@@ -131,7 +132,7 @@ class LinkedList {
             _size--;
 
             tail = temp;
-
+            
             return;
         }
 

@@ -77,5 +77,6 @@ int main() {
     cout << s.top() << '\n'; //     :   10
 
     cout << s.size() << '\n';
+    
     return 0;
 }

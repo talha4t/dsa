@@ -62,8 +62,8 @@ int main() {
     q.pop(); //        :  25
 
     cout << q.Front() << '\n'; //     :   25
-
     cout << q.size() << '\n';
+
 
     return 0;
 }
