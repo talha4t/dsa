@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
 
 void insertion_sort(int a[], int n) {
     
@@ -23,16 +24,15 @@ void insertion_sort(int a[], int n) {
 int main() {
 
     int n;
-    scanf("%d", &n);
+    cin >> n;
 
     int a[n];
     for (int i = 0; i < n; i++)
-        scanf("%d", &a[i]);
-    
+        cin >> a[i];    
     insertion_sort(a, n);
 
     for (int i = 0; i < n; i++)
-        printf("%d ", a[i]);
+        cout << a[i] << ' ';
 
     return 0;
 }
