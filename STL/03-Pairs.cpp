@@ -28,7 +28,10 @@ int main() {
     p2.first = 5;
 
     cout << p.first << '\n';
-
+    
+    // taking input 
+    pair<int, string>pr;
+    cin >> pr.first >> pr.second;
     // pairs with array
     pair<int, int> p_arr[3];
     p_arr[0] = {1, 2};
