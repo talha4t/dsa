@@ -156,11 +156,60 @@ int main() {
 
     cout << "print first element with pointer = " << *v11.begin() << '\n';
 
-    v.erase(v11.begin()); // complexity O(n)
+    v11.erase(v11.begin()); // complexity O(n)
     // erase element from first
 
     cout << "remove first element with v11.erase(pointer) = " << v11[0] << '\n';
     // when we use erase function its shifted all index by one index.
+
+    // Unique Function
+
+    vector<int> v12 = {2, 3, 5, 5, 7, 7, 1};
+
+    sort(v12.begin(), v12.end()); // O(nlog2(n))
+
+    int _size = unique(v12.begin(), v12.end()) - v12.begin(); // O(n)
+
+    cout << "Size of the unique vector = " << _size << '\n'; 
+
+    cout << "print unique numbers" << '\n';
+    for (auto u : v12)
+        cout << u << ' ';
+
+    cout << '\n';
+    // max element and minimum element
+    vector<int>:: iterator balu = max_element(v12.begin(), v12.end()); // O(n)
+    vector<int>:: iterator cement = min_element(v12.begin(), v12.end());
+
+    int mx = max_element(v12.begin(), v12.end()) - v12.begin();
+    int mn = min_element(v12.begin(), v12.end()) - v12.begin();
+
+    cout << "MAX element index = " << mx << '\n';
+    cout << "MIN element index = " << mn << '\n';
+
+    cout << "MAX element = " << *balu << '\n';
+    cout << "MIN element = " << *cement << '\n';
+
+
+    // 2D Vector 
+
+    vector< vector<int> > v13;
+
+    vector<int> a1 = {1, 2, 3, 4, 5};
+    vector<int> a2 = {5, 4, 3, 2, 1};
+
+    v13.push_back(a1);
+    v13.push_back(a2);
+
+    cout << "print 2d vector" << '\n';
+    for (auto u : v13) {
+        for (auto g : u)
+            cout << g << ' ';
+        
+        cout << '\n';
+    }
+
+    cout << '\n';
 
     
     return 0;
