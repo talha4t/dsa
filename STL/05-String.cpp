@@ -127,6 +127,15 @@ int main() {
     if (g.find(h) != -1)
         cout << "YES" << '\n';
     else 
-        cout << "NO" << '\n';  
+        cout << "NO" << '\n'; 
+
+    // next permutation
+
+    string x = "abcd";
+
+    // it will print second largest lexography order. 
+    bool ans = next_permutation(x.begin(), x.end());
+
+    cout << ans << ' ' << x << '\n'; 
     
 }
