@@ -92,11 +92,41 @@ int main() {
     v.push_back("Apple"); 
     v.push_back("discord");
 
-    sort(v.begin(), v.end());
+    // sort(v.begin(), v.end()); // O(nlog(n))
     cout << "Print vector ---> \n";
     for (auto u : v)
         cout << u << '\n';
 
     cout << '\n';
+
+    // delete specific segment of string
+
+    string e = "talhamhamud";
+
+    e.erase(e.begin() + 2, e.begin() + 8);
+
+    cout << e << '\n';
+    cout << '\n';
+
+    // remove specific character from string 
+
+    string f = "talhamahmud";
+
+    f.erase(remove(f.begin(), f.end(), 'a'), f.end());
+
+    cout << f << '\n';
+    
+
+    // check one string another string's substring or not 
+
+    string g = "codeforces";  
+    string h = "force";
+
+    /* g.find(h)....inside "find()" we use which substring i want to find and
+    before . we have to use where the substring exist */ 
+    if (g.find(h) != -1)
+        cout << "YES" << '\n';
+    else 
+        cout << "NO" << '\n';  
     
 }
