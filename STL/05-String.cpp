@@ -80,5 +80,23 @@ int main() {
     d.erase(d.end() - 1);
 
     cout << "Removed last element\n";
-    cout << d << '\n';    
+    cout << d << '\n';   
+
+    cout << '\n';
+
+    // string in vector
+    vector<string> v;
+
+    v.push_back("Talha"); 
+    v.push_back("mahmud"); 
+    v.push_back("Apple"); 
+    v.push_back("discord");
+
+    sort(v.begin(), v.end());
+    cout << "Print vector ---> \n";
+    for (auto u : v)
+        cout << u << '\n';
+
+    cout << '\n';
+    
 }
