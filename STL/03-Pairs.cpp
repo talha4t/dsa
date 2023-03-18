@@ -42,5 +42,35 @@ int main() {
     for (int i = 0; i < 3; i++)
         cout << p_arr[i].first << ' ' << p_arr[i].second << '\n';
 
+
+    // min value and max value
+
+    pair<int, int> a, b;
+
+    a = {1, 2};
+    b = {-1, -2};
+
+    pair<int, int> x = min(a, b);
+    pair<int, int> y = max(a, b);
+
+    cout << x.first << ' ' << x.second << '\n';
+    cout << y.first << ' ' << y.second << '\n';
+
+    // pair of vector
+
+    vector<pair<int, int>> v;
+
+    v.push_back({6, 5});
+    v.push_back({2, 3});
+    v.push_back({4, 5});
+    v.push_back({6, 1});
+    v.push_back({1, 9});
+
+    sort(v.begin(), v.end());
+
+    for (auto u : v)
+        cout << u.first << ' ' << u.second << '\n';
+
+
     return 0;   
 }
