@@ -7,9 +7,9 @@ int main() {
     // here the first data type use for ley and second data type use for value
     id["talha"] = 1;
     id["mahmud"] = 2;
-    id["pavel"] = 5;
+    id["pavel"] = 5; // insert O(log2(n))
 
-    cout << id["pavel"] << '\n';
+    cout << id["pavel"] << '\n'; //  access O(log2(n))
 
 
     map<string, string> gender;
@@ -45,6 +45,51 @@ int main() {
 
     for (auto u : nct) 
         cout << u.first << " = " << u.second << '\n'; 
+
+    
+    // print distinct element of integer array in unsorted way
+
+    map<int, bool> vis;
+
+    vector<int> vv = {2, 2, 1, 1, 1, 3};
+
+    for (int i = 0; i < vv.size(); i++)
+        vis[vv[i]] = true;
+    
+    cout << "Unsorted" << '\n';
+    for (int i = 0; i < vv.size(); i++) { // convert it in for loop
+        int u = vv[i];
+
+        if (vis[u]) {
+            cout << u << '\n';
+            vis[u] = false;
+        }
+    }
+    /*
+    For each loop
+    
+    for (auto u : vv) {
+        if (vis[u]) {
+            cout << u << '\n';
+            vis[u] = false;
+        }
+    }
+    */
+
+
+
+    // print distinct element of integer array in sorted way
+
+    map<int, bool> vis1;
+
+    vector<int> vv1 = {2, 2, 1, 1, 1, 3};
+
+    for (int i = 0; i < vv1.size(); i++)
+        vis1[vv1[i]] = true;
+    
+    cout << "Sorted" << '\n';
+    for (auto u : vis1)
+        cout << u.first << '\n';
 
     return 0;
 }
