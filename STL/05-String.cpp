@@ -133,7 +133,7 @@ int main() {
 
     string x = "abcd";
 
-    // it will print second largest lexography order. 
+    // it will print second largest lexicography order. 
     bool ans = next_permutation(x.begin(), x.end());
 
     cout << ans << ' ' << x << '\n'; 
