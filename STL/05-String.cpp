@@ -122,7 +122,7 @@ int main() {
     string g = "codeforces";  
     string h = "force";
 
-    /* g.find(h)....inside "find()" we use which substring i want to find and
+    /* g.find(h)....inside "find()" we use which substring we want to find and
     before . we have to use where the substring exist */ 
     if (g.find(h) != -1)
         cout << "YES" << '\n';
