@@ -3,7 +3,6 @@ using namespace std;
 
 void bubble_sort(int num[], int n) {
 
-
     // 2 3 4 5
     // 0 1 2 3
     // 2 3 4 5 (sorted)
