@@ -2,7 +2,7 @@
 using namespace std;
 
 const int mx = 1e5 + 10;
-int a[mx];
+int a[mx], b[mx];
 
 void merge_sort(int l, int r) {
 
@@ -14,39 +14,48 @@ void merge_sort(int l, int r) {
     merge_sort(l, mid);
     merge_sort(mid + 1, r);
 
-    vector<int> L, R;
-    for (int i = l; i <= mid; i++)
-        L.push_back(a[i]);
-    for (int i = mid + 1; i <= r; i++)
-        R.push_back(a[i]);
-    
-    int Lid = 0, Rid = 0, i = l;
+    int LS = l, RS = mid + 1;
 
-    while(Lid < (int)L.size() or Rid < (int)R.size()) {
-        if (Rid == (int)R.size() or L[Lid] < R[Rid]) {
-            a[i] = L[Lid];
-            Lid++; i++;
+    for (int i = l; i <= r; i++) {
+
+        if (LS > mid) {
+            b[i] = a[RS];
+            RS++;
+        }
+        else if (RS > r) {
+            b[i] = a[LS];
+            LS++;
+        }
+        else if (a[LS] <= a[RS]) {
+            b[i] = a[LS];
+            LS++;
         }
         else {
-            a[i] = R[Rid];
-            Rid++; i++;
+            b[i] = a[RS];
+            RS++;
         }
     }
+
+    for (int i = l; i <= r; i++)
+        a[i] = b[i];
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n; cin >> n;
+    int n = 0;
 
-    for (int i = 1; i <= n; i++)
-        cin >> a[i];
+    int x;
+    while(cin >> x) {
+        a[++n] = x;
+    }
     
     merge_sort(1, n);
 
     for (int i = 1; i <= n; i++)
         cout << a[i] << ' ';
     
+    cout << '\n';
 
     return 0;
 }
