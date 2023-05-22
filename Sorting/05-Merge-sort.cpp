@@ -43,12 +43,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n = 0;
+    int n; cin >> n;
 
-    int x;
-    while(cin >> x) {
-        a[++n] = x;
-    }
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
     
     merge_sort(1, n);
 
