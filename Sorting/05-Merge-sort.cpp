@@ -22,8 +22,8 @@ void merge_sort(int l, int r) {
     
     int Lid = 0, Rid = 0, i = l;
 
-    while(Lid < L.size() or Rid < R.size()) {
-        if (Rid == R.size() or L[Lid] < R[Rid]) {
+    while(Lid < (int)L.size() or Rid < (int)R.size()) {
+        if (Rid == (int)R.size() or L[Lid] < R[Rid]) {
             a[i] = L[Lid];
             Lid++; i++;
         }
