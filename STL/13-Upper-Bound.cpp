@@ -10,7 +10,7 @@ int main() {
     int x = 4;
 
     auto it = upper_bound(v.begin(), v.end(), x); // first one >= x
-    // O(n)
+    // O(log(n))
     
     cout << (it - v.begin()) << '\n';
         
