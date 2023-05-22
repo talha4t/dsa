@@ -2,7 +2,7 @@
 using namespace std;
 
 const int mx = 1e5 + 10;
-int a[mx], b[mx];
+int a[mx];
 
 void merge_sort(int l, int r) {
 
@@ -14,30 +14,28 @@ void merge_sort(int l, int r) {
     merge_sort(l, mid);
     merge_sort(mid + 1, r);
 
-    int LS = l, RS = mid + 1;
+    vector<int> L, R;
+    for (int i = 1; i <= mid; i++)
+        L.push_back(a[i]);
+    
+    for (int i = mid + 1; i <= r; i++)
+        R.push_back(a[i]);
 
-    for (int i = l; i <= r; i++) {
-
-        if (LS > mid) {
-            b[i] = a[RS];
-            RS++;
+    int Lid = 0, Rid = 0, i = l;
+    while(Lid < (int)L.size() or Rid < (int)R.size()) {
+        if (Lid == (int)L.size()) {
+            a[i] = R[Rid];
+            Rid++; i++;
         }
-        else if (RS > r) {
-            b[i] = a[LS];
-            LS++;
-        }
-        else if (a[LS] <= a[RS]) {
-            b[i] = a[LS];
-            LS++;
+        else if (Rid == (int)R.size() or L[Lid] < R[Rid]) {
+            a[i] = L[Lid];
+            Lid++; i++;
         }
         else {
-            b[i] = a[RS];
-            RS++;
+            a[i] = R[Rid];
+            Rid++; i++;
         }
     }
-
-    for (int i = l; i <= r; i++)
-        a[i] = b[i];
 }
 int main() {
     ios_base::sync_with_stdio(false);
