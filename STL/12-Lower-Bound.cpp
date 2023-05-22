@@ -9,10 +9,11 @@ int main() {
 
     int x = 4;
 
-    auto it = lower_bound(v.begin(), v.end(), x);
-
+    auto it = lower_bound(v.begin(), v.end(), x); // first one > x
+    // O(n)
+    
     cout << (it - v.begin()) << '\n';
-        
+
     return 0;
 }
 

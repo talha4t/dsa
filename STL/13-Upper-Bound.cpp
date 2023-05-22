@@ -9,8 +9,9 @@ int main() {
 
     int x = 4;
 
-    auto it = upper_bound(v.begin(), v.end(), x);
-
+    auto it = upper_bound(v.begin(), v.end(), x); // first one >= x
+    // O(n)
+    
     cout << (it - v.begin()) << '\n';
         
     return 0;
