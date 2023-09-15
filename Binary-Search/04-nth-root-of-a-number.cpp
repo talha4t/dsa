@@ -21,7 +21,7 @@ bool solve() {
 
     double l = 1, r = x;
 
-    // time complexity : log2(10 ^ d) ; d = number of decimal places we want accuracy
+    // time complexity : n * log2(10 ^ d) ; d = number of decimal places we want accuracy
     while(r - l > eps) {
         double mid = (r + l) / 2;
 
